@@ -21,7 +21,7 @@ request = pc.makeRequestRSpec()
 node = request.RawPC("node")
 
 # Install and execute a script that is contained in the repository.
-node.addService(pg.Execute(shell="sh", command="/local/repository/test.sh"))
+node.addService(pg.Execute(shell="sh", command="echo test > /local/repository/test.txt"))
 
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
