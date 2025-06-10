@@ -15,6 +15,7 @@ else
     sed -i "s/GRUB_CMDLINE_LINUX=\"/GRUB_CMDLINE_LINUX=\"isolcpus=0,1,2 /" /etc/default/grub
     update-grub
 
+    echo "this works" > /local/test
     > /local/startup_service_done
     reboot
 fi
