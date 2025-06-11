@@ -1,9 +1,3 @@
-"""This profile sets up a low-latency, user-space thread scheduling environment using Skyloft, a framework built on Intel’s User Interrupts (UINTR) for sub-microsecond preemption.
-
-Instructions:
-Wait for the profile instance to start, then click on the node in the topology and choose the `shell` menu item. 
-"""
-
 import geni.portal as portal
 import geni.rspec.pg as pg
 
