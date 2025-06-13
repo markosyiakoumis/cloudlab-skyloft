@@ -7,5 +7,5 @@ fi
 
 # Install Skyloft.
 git clone https://github.com/yhtzd/skyloft.git /local/skyloft
-cd skyloft
+cd /local/skyloft
 git submodule update --init --recursive
