@@ -7,7 +7,7 @@ fi
 
 # Install dependencies.
 apt-get update
-apt-get install -y git cmake pkg-config flex bison meson libelf-dev libssl-dev libnuma-dev python3 python3-numpy pyton3-matplotlib python3-pyelftools
+apt-get install -y git cmake pkg-config flex bison meson libelf-dev libssl-dev libnuma-dev python3 python3-numpy python3-matplotlib python3-pyelftools
 
 # Execute other necessary initialization scripts.
 bash -x /local/repository/scripts/server/kernel.sh
