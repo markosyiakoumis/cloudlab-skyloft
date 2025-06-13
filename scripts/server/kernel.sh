@@ -14,5 +14,4 @@ cd /local/uintr-linux-kernel
 sed -i 's|^GRUB_CMDLINE_LINUX=.*|GRUB_CMDLINE_LINUX="isolcpus=0-23 nohz_full=0-23 intel_iommu=off nopat watchdog_thresh=0"|' /etc/default/grub
 
 update-grub2
-sleep 1m
 reboot
