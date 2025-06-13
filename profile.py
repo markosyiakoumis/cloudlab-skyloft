@@ -10,7 +10,7 @@ server.component_manager_id = "urn:publicid:IDN+utah.cloudlab.us+authority+cm"
 server.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD"
 
 # Clone Skyloft's AE repository
-server.addService(pg.Install(url="https://github.com/yhtzd/archive/main.tar.gz", path="/local"))
+server.addService(pg.Install(url="https://github.com/yhtzd/skyloft-sosp24-ae/archive/main.tar.gz", path="/local"))
 # Clone Skyloft's modified kernel
 server.addService(pg.Install(url="https://github.com/yhtzd/uintr-linux-kernel/archive/skyloft.tar.gz", path="/local"))
 # Clone Skyloft's modified DPDK
