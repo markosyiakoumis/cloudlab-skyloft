@@ -8,11 +8,7 @@ if ! cat /proc/cmdline | grep isolcpus > /dev/null; then
     apt-get install -y git cmake pkg-config flex bison meson libelf-dev libssl-dev python3 python3-pip
     pip3 install numpy matplotlib pyelftools
 
-    # Clone the AE Repository
-    git clone https://github.com/yhtzd/skyloft-sosp24-ae.git /local/skyloft-sosp24-ae
-
     # Build and Install the Kernel
-    git clone -b skyloft --depth 1 https://github.com/yhtzd/uintr-linux-kernel.git /local/uintr-linux-kernel
     cd /local/uintr-linux-kernel
     ./build.sh
 
@@ -22,7 +18,6 @@ if ! cat /proc/cmdline | grep isolcpus > /dev/null; then
     reboot
 else
     # Install DPDK
-    git clone https://github.com/yhtzd/dpdk.git /local/dpdk
     cd /local/dpdk
     meson build
     cd build
@@ -30,7 +25,6 @@ else
     meson install
 
     # Download Skyloft
-    git clone https://github.com/yhtzd/skyloft.git /local/skyloft
     cd /local/skyloft
     git submodule update --init --recursive
 
