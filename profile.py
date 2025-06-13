@@ -19,7 +19,7 @@ server.addService(pg.Install(url="https://github.com/yhtzd/dpdk/archive/main.tar
 server.addService(pg.Install(url="https://github.com/yhtzd/skyloft/archive/main.tar.gz", path="/local"))
 
 # Execute server setup script
-server.addService(pg.Execute(shell="bash", command="/local/repository/scripts/server.sh"))
+#server.addService(pg.Execute(shell="bash", command="/local/repository/scripts/server.sh"))
 
 client = request.RawPC("client")
 client.hardware_type = "c220g1"
@@ -30,6 +30,6 @@ client.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU20-64-S
 client.addService(pg.Install(url="https://github.com/yhtzd/shenango-client/archive/master.tar.gz", path="/local"))
 
 # Execute client setup script
-client.addService(pg.Execute(shell="bash", command="/local/repository/scripts/client.sh"))
+#client.addService(pg.Execute(shell="bash", command="/local/repository/scripts/client.sh"))
 
 pc.printRequestRSpec(request)

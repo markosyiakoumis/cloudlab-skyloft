@@ -5,7 +5,7 @@ set -x
 if ! cat /proc/cmdline | grep isolcpus > /dev/null; then
     # Install Dependencies
     apt-get update
-    apt-get install -y git cmake pkg-config flex bison meson libelf-dev libssl-dev python3 python3-pip
+    apt-get install -y git cmake pkg-config flex bison meson libelf-dev libssl-dev libnuma-dev python3 python3-pip
     pip3 install numpy matplotlib pyelftools
 
     # Build and Install the Kernel
