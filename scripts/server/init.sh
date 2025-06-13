@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Elevate geniuser to root.
-if [ "$(id -u)" -ne 0 ]; then
-  exec sudo "$0" "$@"
-fi
+#if [ "$(id -u)" -ne 0 ]; then
+#  exec sudo "$0" "$@"
+#fi
 
 # Install dependencies.
 apt-get update
