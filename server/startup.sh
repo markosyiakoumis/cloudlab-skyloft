@@ -13,7 +13,7 @@ apt-get install -y git cmake pkg-config flex bison meson libelf-dev libssl-dev l
 /local/repository/server/installers/kernel.sh
 /local/repository/server/installers/dpdk.sh
 /local/repository/server/installers/skyloft.sh
-/local/repository/server/server/setup-hosts.sh
+/local/repository/server/scripts/setup-hosts.sh
 /local/repository/server/installers/kmod.sh
 
 # Mark that the startup service has finished.
