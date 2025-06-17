@@ -26,7 +26,7 @@ server.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-S
 
 # Attach server initialization script.
 server.addService(pg.Execute(shell="bash", command="sudo /local/repository/server/startup.sh"))
-server.addService(pg.Execute(shell="bash", command=f"sudo /local/repository/server/experiment-setup.sh --experiments={experiments_arg}"))
+server.addService(pg.Execute(shell="bash", command="sudo /local/repository/server/experiment-setup.sh --experiments=%s" % experiments_arg))
 
 client = request.RawPC("client")
 client.hardware_type = "c220g1"
