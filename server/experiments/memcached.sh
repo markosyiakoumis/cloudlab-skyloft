@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "Memcached test experiment" > /local/repository/memcached
+cd /local/repository/skyloft/scripts
+./build.sh memcached
+./run.sh memcached -p 11211 -t 4 -u root
