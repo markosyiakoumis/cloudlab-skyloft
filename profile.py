@@ -24,9 +24,9 @@ server.hardware_type = "c6620"
 server.component_manager_id = "urn:publicid:IDN+utah.cloudlab.us+authority+cm"
 server.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD"
 
-# Attach server initialization script.
+# Attach server initialization and experiment scripts.
 server.addService(pg.Execute(shell="bash", command="sudo /local/repository/server/startup.sh"))
-server.addService(pg.Execute(shell="bash", command="sudo /local/repository/server/experiment-setup.sh --experiments=%s" % experiments_arg))
+server.addService(pg.Execute(shell="bash", command="sudo /local/repository/server/experiment-setup.sh --experiments=memcached"))
 
 client = request.RawPC("client")
 client.hardware_type = "c220g1"

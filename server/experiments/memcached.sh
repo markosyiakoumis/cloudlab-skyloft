@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Memcached test experiment"
+echo "Memcached test experiment" > /local/repository/memcached
