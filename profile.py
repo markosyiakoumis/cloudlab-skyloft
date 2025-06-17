@@ -16,7 +16,7 @@ for name, default in experiments:
     pc.defineParameter(name, name, portal.ParameterType.BOOLEAN, default)
 
 params = pc.bindParameters()
-enabled_experiments = [name for name, *_ in experiments if getattr(params, name)]
+enabled_experiments = [name for name, default in experiments if getattr(params, name)]
 experiments_arg = ",".join(enabled_experiments)
 
 server = request.RawPC("server")
