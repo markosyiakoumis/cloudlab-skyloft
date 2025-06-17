@@ -24,7 +24,7 @@ server.component_manager_id = "urn:publicid:IDN+utah.cloudlab.us+authority+cm"
 server.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-STD"
 
 # Attach server initialization script.
-server.addService(pg.Execute(shell="bash", command="sudo /local/repository/scripts/server/init.sh"))
+#server.addService(pg.Execute(shell="bash", command="sudo /local/repository/scripts/server/init.sh"))
 
 client = request.RawPC("client")
 client.hardware_type = "c220g1"
