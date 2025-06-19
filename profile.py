@@ -9,7 +9,8 @@ pc = portal.Context()
 request = pc.makeRequestRSpec()
 
 experiments = [
-    ("memcached", True)
+    ("memcached", True),
+    ("thread", True)
 ]
 
 for name, default in experiments:
@@ -26,7 +27,7 @@ server.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU22-64-S
 
 # Attach server initialization and experiment scripts.
 server.addService(pg.Execute(shell="bash", command="sudo /local/repository/server/startup.sh"))
-server.addService(pg.Execute(shell="bash", command="sudo /local/repository/server/experiment-setup.sh --experiments=memcached"))
+server.addService(pg.Execute(shell="bash", command="sudo /local/repository/server/experiment-setup.sh --experiments=" + experiments_arg))
 
 client = request.RawPC("client")
 client.hardware_type = "c220g1"
